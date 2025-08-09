@@ -1,0 +1,55 @@
+{
+  "id": "de197834-5ee8-45ab-8a79-1420000aa61b",
+  "name": "What\u0027s the status of my policy?",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "check_policy_status",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "2affe457-a895-4293-a0ea-0757abbb41c8",
+          "name": "policy_number",
+          "required": true,
+          "dataType": "@policy_number",
+          "value": "$policy_number",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "Please provide your policy number."
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "Thanks! I’ve found your policy number #$policy_number. It’s currently active and valid until July 2026."
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
