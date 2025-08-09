@@ -27,8 +27,17 @@ git clone https://github.com/yourusername/insurance-chatbot.git
 cd insurance-chatbot
 ```
 
+### 2. 	Download the InsuranceAssistant folder and compress it into a .zip archive
 
-### 2. Create and populate the MySQL database
+- Make sure that the files agent.json and package.json and the folders intents/ and entities/ are at the root level of the zip.
+
+### 3. 	Upload the model to DialogFlow ES
+
+- Go to Dialogflow ES Console → Settings → Export and Import → Restore from zip.
+- Upload the .zip archive you just created to import the agent.
+
+
+### 4. Create and populate the MySQL database
 
 - Log into MySQL:
 ```bash
@@ -47,26 +56,26 @@ mysql -u root -p insurance < insurance_backup.sql
 ```
 
 
-### 3. Run the Flask server
+### 5. Run the Flask server
 ```bash
 python app.py
 ```
 
 
-### 4. Use Ngrok to expose your local Flask server
+### 6. Use Ngrok to expose your local Flask server
 ```bash
 ngrok http 5001
 ```
 
 
-### 4. Connect with Dialogflow
+### 7. Connect with Dialogflow
 
 1.	Go to Dialogflow ES
 2.	In your agent, go to Fulfillment → Enable Webhook
 3. Copy the generated HTTPS URL from ngrok and paste it into the webhook URL field in Dialogflow Fulfillment.
 4. In your Dialogflow intent, add a parameter called policy_number and ensure it's passed in the request.
 
-### 5. Test
+### 8. Test
   1. In the Dialogflow simulator, try typing:
 
 > What is the status of policy number 123456?
@@ -75,10 +84,14 @@ ngrok http 5001
 
 > Thanks Mario Rossi! I've found your policy #123456. It's currently active and valid until 2026-07-15.
 
+---
+
 ## Notes
 -	app.py connects to MySQL using user root and no password by default. You can modify this in the get_policy_data() function.
 -	The SQL file includes 3 sample policies.
 -	This project is for demonstration purposes only.
+
+---
 
 ## License
 
@@ -103,6 +116,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-
-
