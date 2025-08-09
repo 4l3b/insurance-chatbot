@@ -1,0 +1,47 @@
+[
+  {
+    "id": "79acdfdb-86cf-4698-ae8e-95df09aa24a5",
+    "data": [
+      {
+        "text": "My policy number is ",
+        "userDefined": false
+      },
+      {
+        "text": "123456",
+        "meta": "@policy_number",
+        "alias": "policy_number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "55212684-4b3d-429d-9409-a6fd60636e6b",
+    "data": [
+      {
+        "text": "What\u0027s the status of my policy?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "66eeb120-6785-4d93-bb10-c9a74b2a7e74",
+    "data": [
+      {
+        "text": "Is my insurance still active?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]
